@@ -4,6 +4,6 @@ def pow(a, b):
     for _ in range(b):
         if (b > 0):
             result *= a
-        elif (b < 0)
+        elif (b < 0):
             result /= a
     return result
