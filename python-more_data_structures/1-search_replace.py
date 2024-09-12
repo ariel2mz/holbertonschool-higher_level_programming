@@ -7,4 +7,3 @@ def search_replace(my_list, search, replace):
         else:
             nuevo.append(my_list[i])
     return nuevo
-
