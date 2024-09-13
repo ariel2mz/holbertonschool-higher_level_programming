@@ -3,6 +3,8 @@ def uniq_add(my_list=[]):
     nuevo = []
     diferencias = 0
     retorno = 0
+    if len(my_list) == 0:
+        return 0
     nuevo.append(my_list[0])
     for i in range(0, len(my_list)):
         for j in range(0, len(nuevo)):
