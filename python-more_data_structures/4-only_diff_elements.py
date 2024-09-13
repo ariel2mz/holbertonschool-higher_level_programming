@@ -8,4 +8,3 @@ def only_diff_elements(set_1, set_2):
         if x not in set_1:
             set_3.append(x)
     return set_3
-
