@@ -3,13 +3,14 @@
 This module defines a Square class.
 """
 
+
 class Square:
     """
     Class that defines a square with a private instance attribute 'size'.
 
     Attributes:
         __size (int): The size of the square.
-    
+
     Methods:
         __init__(self, size=0): Initializes the square with a given size.
         area(self): Returns the current area of the square.
