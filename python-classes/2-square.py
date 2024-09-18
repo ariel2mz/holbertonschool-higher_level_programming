@@ -9,10 +9,11 @@ class Square:
 
     Attributes:
         __size (int): The size of the square.
-    
+
     Methods:
         __init__(self, size=0): Initializes the square with a given size.
     """
+
 
     def __init__(self, size=0):
         """
