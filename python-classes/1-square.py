@@ -1,24 +1,21 @@
 #!/usr/bin/python3
 """
-This module provides a simple definition for a Square class.
-
-The Square , with no attributes or methods. It serves as a
-basic strucrelated to square functionality.
+This module defines a Square class.
 """
-
 
 class Square:
     """
-    Class that defines a square.
-
-    This class is cunot have any attributes or methods.
-    It serves aor future implementation of square-related functionality.
-
+    Class that defines a square with a private instance attribute 'size'.
+    
     Attributes:
-        None
-    Methods:
-        None
+        __size (int): The size of the square.
     """
 
-    size = None
-    pass
+    def __init__(self, size):
+        """
+        Initializes the square with a given size.
+        
+        Args:
+            size (int): The size of the square.
+        """
+        self.__size = size
