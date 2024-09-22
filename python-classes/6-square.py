@@ -6,7 +6,7 @@ This module defines a Square class.
 
 class Square:
     """
-    Class that defines a square with private 
+    Class that defines a square with private
     instance attributes 'size' and 'position'.
 
     Attributes:
@@ -14,7 +14,7 @@ class Square:
         __position (tuple): The position of the square.
 
     Methods:
-        __init__(self, size=0, position=(0, 0)): 
+        __init__(self, size=0, position=(0, 0)):
         Initializes the square with a given size and position.
         area(self): Returns the current area of the square.
         my_print(self): Prints the square using '#' character.
@@ -35,7 +35,8 @@ class Square:
             The position of the square (default is (0, 0)).
 
         Raises:
-            TypeError: If size is not an integer or position is not a tuple of 2 positive integers.
+            TypeError: If size is not an integer or
+            position is not a tuple of 2 positive integers.
             ValueError: If size is less than 0.
         """
         self.size = size
@@ -107,7 +108,7 @@ class Square:
 
     def my_print(self):
         """
-        Prints the square using the '#' character. 
+        Prints the square using the '#' character.
         If size is 0, prints an empty line.
         The position is respected by adding spaces before each line.
         """
@@ -119,6 +120,7 @@ class Square:
         for _ in range(self.__position[1]):
             print("")
 
-        # Print the square with spaces according to horizontal position (position[0])
+        # Print the square with spaces according
+        # to horizontal position (position[0])
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
