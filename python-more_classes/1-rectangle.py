@@ -42,6 +42,7 @@ class Rectangle:
         """
         return self.__width
 
+    @width.setter
     def width(self, value):
         """
         Setter for the width attribute, with validation.
@@ -59,6 +60,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    @property
     def height(self):
         """
         Getter for the height attribute.
@@ -68,6 +70,7 @@ class Rectangle:
         """
         return self.__height
 
+    @height.setter
     def height(self, value):
         """
         Setter for the height attribute, with validation.
