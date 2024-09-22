@@ -101,12 +101,12 @@ class Rectangle:
         return self.__height * self.__width
 
     def perimeter(self):
-         """
+        """
             Returns the perimeter.
 
             Args:
                 self (Rectangle): the rectangle
-            """
+        """
         if self.__height == 0 or self.__width == 0:
             return 0
         else:
