@@ -20,4 +20,3 @@ class Rectangle:
         None
     """
     pass
-
