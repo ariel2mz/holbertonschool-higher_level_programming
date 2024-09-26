@@ -1,5 +1,4 @@
 # 1-my_list.txt
-# Brennan D Baraban <375@holbertonschool.com>
 
 =======================
 How to Use 1-my_list.py
@@ -38,7 +37,6 @@ Or a single argument, which must be an iterable object.
     >>> my_list = MyList(None)
     Traceback (most recent call last):
     TypeError: 'NoneType' object is not iterable
-
 
 ::
 
@@ -135,4 +133,10 @@ The method prints the list in ascending sorted order.
     >>> print(my_list)
     [-1, 4, 2, 3, 5]
 
+The sorted order after appending a negative number:
+
 ::
+
+    >>> my_list.print_sorted()
+    [-1, 2, 3, 4, 5]
+
