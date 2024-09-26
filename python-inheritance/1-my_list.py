@@ -9,7 +9,7 @@ basic strucrelated to square functionality.
 
 class MyList(list):
     """
-    HOLA HOLA HOLA HOLA 
+    HOLA HOLA HOLA HOLA
     """
 
 
