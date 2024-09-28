@@ -1,17 +1,3 @@
-# 7-base_geometry.txt
-# Brennan D Baraban <375@holbertonschool.com>
-
-=============================
-How to Use 7-base_geometry.py
-=============================
-
-This modules defines a base geometry class BaseGeometry.
-
-Instantiation
-=============
-
-``BaseGeometry`` includes no attributes, and accordingly is initialized 
-with no arguments.
 
 ::
 
