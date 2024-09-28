@@ -63,6 +63,7 @@ class Square(Rectangle):
             """
         Initializes a Rectangle instance after validating its dimensions.
         Args:
+            self (int): The width of the rectangle.
             size (int): The width of the rectangle.
         """
         self.integer_validator("size", size)
