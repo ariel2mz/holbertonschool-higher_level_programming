@@ -60,7 +60,7 @@ class Rectangle(BaseGeometry):
 class Square(Rectangle):
 
     def __init__(self, size):
-    """
+        """
     Initializes a Rectangle instance after validating its dimensions.
     Args:
     self (int): The width of the rectangle.
