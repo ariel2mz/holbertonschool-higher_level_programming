@@ -8,6 +8,9 @@ BaseGeometry class and a Rectangle class that inherits from it.
 class BaseGeometry:
     """BaseGeometry class providing basic geometry functionalities."""
 
+    __height
+    __width
+    
     def area(self):
         """Raises an Exception as area is not implemented."""
         return self.__width * self.__height
