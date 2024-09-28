@@ -56,3 +56,15 @@ class Rectangle(BaseGeometry):
         Format: [Rectangle] <width>/<height>
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
+
+class Square(Rectangle):
+
+        def __init__(self, size):
+        """
+        Initializes a Rectangle instance after validating its dimensions.
+
+        Args:
+            size (int): The width of the rectangle.
+        """
+        self.integer_validator("size", size)
+        self.__size = size
