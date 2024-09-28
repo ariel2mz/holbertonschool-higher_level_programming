@@ -46,7 +46,7 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
     
-    def __str__(self)
+    def __str__(self):
         """
         aaaa
         """
