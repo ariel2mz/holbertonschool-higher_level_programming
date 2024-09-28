@@ -65,12 +65,4 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """
-        Initializes a Square instance after validating its size.
-
-        Args:
-            size (int): The size of the square (both width and height).
-        """
-        self.integer_validator("size", size)
-        super().__init__(size, size)  # Use super to call Rectangle's init with width and height
-        self.__size = size
-
+   
