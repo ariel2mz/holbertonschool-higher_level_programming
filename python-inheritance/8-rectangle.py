@@ -10,7 +10,7 @@ class BaseGeometry:
 
     def area(self):
         """Raises an Exception as area is not implemented."""
-        raise Exception("area() is not implemented")
+        return self.__width * self.__height
 
     def integer_validator(self, name, value):
         """
@@ -45,3 +45,9 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+    
+    def __str__(self)
+        """
+        aaaa
+        """
+        print(f"[Rectangle]{width}/{height}")
