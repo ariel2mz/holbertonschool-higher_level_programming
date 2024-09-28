@@ -57,18 +57,18 @@ class Rectangle(BaseGeometry):
         """
         return f"[Rectangle] {self.__width}/{self.__height}"
 
+
 class Square(Rectangle):
     """
-    es un rectangulo :V
+    A Square class that inherits from Rectangle.
     """
 
-    
     def __init__(self, size):
         """
-    Initializes a Rectangle instance after validating its dimensions.
-    Args:
-    self (int): The width of the rectangle.
-    size (int): The width of the rectangle.
-    """
+        Initializes a Square instance after validating its size.
+
+        Args:
+            size (int): The size of the square (both width and height).
+        """
         self.integer_validator("size", size)
         self.__size = size
