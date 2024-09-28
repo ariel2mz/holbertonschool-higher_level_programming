@@ -11,7 +11,7 @@ class BaseGeometry:
     """
 Class that defines a square with a private instance attribute 'size'.
 """
-    area 
+@property
 def area(self):
     """
     quesoquesoqueso
