@@ -1,4 +1,4 @@
->>> from 7-base_geometry import BaseGeometry  # Replace 'your_module_name' with the actual name of the file where BaseGeometry is defined.
+>>> from 7-base_geometry import BaseGeometry
 
 >>> bg = BaseGeometry()
 >>> print(bg.area)  # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
