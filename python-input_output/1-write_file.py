@@ -13,4 +13,4 @@ def write_file(filename="", text=""):
     :return: None
     """
     with open(filename, "w") as file:
-        file.write(text)
+        return file.write(text)
