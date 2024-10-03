@@ -4,7 +4,7 @@ adssada
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
     Writes the given text to the specified file.
 
