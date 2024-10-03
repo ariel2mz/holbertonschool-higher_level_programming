@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """
-adssada
+adsda
 """
 
 
 def append_write(filename="", text=""):
     """
-    Writes the given text to the specified file.
+    Appends the given text to the specified file and returns the number of characters added.
 
-    :param filename: The name of the file to write to.
-    :param text: The text to be written to the file.
-    :return: None
+    :param filename: The name of the file to append to.
+    :param text: The text to be appended to the file.
+    :return: The number of characters added.
     """
-    with open(filename, "r") as file:
-        with open(filename, "w") as write:
-            write.write(file.read() + text)
+    with open(filename, "a", encoding="utf-8") as file:
+        chars_written = file.write(text)
+    return chars_written
