@@ -4,7 +4,7 @@ sadsadsad
 """
 
 
-class Student
+class Student:
     """
 Class that defines a square with a private instance attribute 'size'.
 
