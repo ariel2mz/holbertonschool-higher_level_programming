@@ -18,8 +18,7 @@ def load_from_json_file(filename):
     :param filename: The name of the file containing the JSON data.
     :return: The object represented by the JSON data in the file.
     """
-
-
+a
     with open(filename, "r", encoding="utf-8") as file:
         return json.load(file)
 
