@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Module that defines a Student class with serialization and deserialization mechanisms.
+Module that defines a Student class with serialization and
+deserialization mechanisms.
 """
 
 
@@ -30,8 +31,8 @@ class Student:
         """
         Retrieves a dictionary representation of a Student instance.
 
-        If attrs is a list of strings, only attributes contained in this list 
-        will be retrieved. Otherwise, all attributes are retrieved.
+        If attrs is a list of strings, only attributes contained in this
+        list will be retrieved. Otherwise, all attributes are retrieved.
 
         :param attrs: A list of attribute names to retrieve (optional).
         :return: A dictionary representing the Student instance.
@@ -46,7 +47,8 @@ class Student:
 
     def reload_from_json(self, json):
         """
-        Replaces all attributes of the Student instance with values from a dictionary.
+        Replaces all attributes of the Student instance with values from
+        a dictionary.
 
         :param json: A dictionary with new attribute values.
         """
