@@ -4,6 +4,7 @@ Module that defines a Student class and provides a method to convert
 the instance to a dictionary representation for JSON serialization.
 """
 
+
 class Student:
     """
     Class that defines a student with first name, last name, and age.
@@ -13,7 +14,7 @@ class Student:
         last_name (str): The student's last name.
         age (int): The student's age.
     """
-    
+
     def __init__(self, first_name, last_name, age):
         """
         Initialize a new Student instance.
@@ -32,6 +33,7 @@ class Student:
         (list, dictionary, string, integer, boolean)
         for JSON serialization of the Student instance.
 
-        :return: A dictionary containing all serializable attributes of the Student object.
+        :return: A dictionary containing all serializable
+        attributes of the Student object.
         """
         return self.__dict__
