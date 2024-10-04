@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-Script to add all command-line arguments to a list and save it as JSON in a file.
+Script to add all command-line
+arguments to a list and save it as JSON in a file.
 """
+
 
 import sys
 import os
@@ -15,8 +17,10 @@ def load_from_json_file(filename):
     :param filename: The name of the file containing the JSON data.
     :return: The object represented by the JSON data in the file.
     """
+
     with open(filename, "r", encoding="utf-8") as file:
         return json.load(file)
+
 
 # Function to save an object to a JSON file
 def save_to_json_file(my_obj, filename):
@@ -26,8 +30,10 @@ def save_to_json_file(my_obj, filename):
     :param my_obj: The object to be saved to the file.
     :param filename: The name of the file to save the object to.
     """
+
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(my_obj, file)
+
 
 # Define the filename for storing the list
 filename = "add_item.json"
