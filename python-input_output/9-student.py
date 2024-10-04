@@ -37,3 +37,12 @@ class Student:
         attributes of the Student object.
         """
         return self.__dict__
+
+    def reload_from_json(self, json):
+            """
+            Replaces all attributes of the Student instance using the provided json.
+
+            :param json: A dictionary with new attribute values to set on the instance.
+            """
+            for key, value in json.items():
+                setattr(self, key, value)
