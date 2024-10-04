@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-A class that defines a student with methods for JSON serialization
-and deserialization.
+Module that defines a Student class with serialization and deserialization mechanisms.
 """
+
 
 class Student:
     """
-    A class that defines a student by first name, last name, and age.
+    Class that defines a student with first name, last name, and age.
 
     Attributes:
         first_name (str): The student's first name.
@@ -16,7 +16,7 @@ class Student:
 
     def __init__(self, first_name, last_name, age):
         """
-        Initializes a new Student instance.
+        Initialize a new Student instance.
 
         :param first_name: The student's first name.
         :param last_name: The student's last name.
@@ -30,23 +30,26 @@ class Student:
         """
         Retrieves a dictionary representation of a Student instance.
 
-        :param attrs: A list of attribute names to include in the dictionary.
-                      If attrs is a list of strings, only those attributes
-                      are retrieved. Otherwise, all attributes are retrieved.
-        :return: A dictionary representation of the instance.
+        If attrs is a list of strings, only attributes contained in this list 
+        will be retrieved. Otherwise, all attributes are retrieved.
+
+        :param attrs: A list of attribute names to retrieve (optional).
+        :return: A dictionary representing the Student instance.
         """
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            # Only retrieve the attributes listed in attrs
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
-        else:
-            # Retrieve all attributes
+        if attrs is None:
             return self.__dict__
+        else:
+            return {
+                key: value for key, value in self.__dict__.items()
+                if key in attrs
+            }
 
     def reload_from_json(self, json):
         """
-        Replaces all attributes of the Student instance using the provided json.
+        Replaces all attributes of the Student instance with values from a dictionary.
 
-        :param json: A dictionary with new attribute values to set on the instance.
+        :param json: A dictionary with new attribute values.
         """
         for key, value in json.items():
-            setattr(self, key, value)
+            if hasattr(self, key):
+                setattr(self, key, value)
