@@ -27,8 +27,8 @@ def save_to_json_file(my_obj, filename):
         return file.write(json.dumps(my_obj))
 
 
-filename = "add_item.json"
 
 lista = load_from_json_file(filename)
+lista.extend(sys.argv[1:])
 save_to_json_file(lista, filename)
 
