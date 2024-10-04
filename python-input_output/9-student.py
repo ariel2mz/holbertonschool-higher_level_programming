@@ -1,31 +1,37 @@
 #!/usr/bin/python3
 """
-sadsadsad
+Module that defines a Student class and provides a method to convert
+the instance to a dictionary representation for JSON serialization.
 """
-
 
 class Student:
     """
-Class that defines a square with a private instance attribute 'size'.
+    Class that defines a student with first name, last name, and age.
 
     Attributes:
-        first_name (str)
-        last_name (str)
-        age (int)
-
+        first_name (str): The student's first name.
+        last_name (str): The student's last name.
+        age (int): The student's age.
     """
-    first_name (str)
-    last_name (str)
-    age (int)
+    
+    def __init__(self, first_name, last_name, age):
+        """
+        Initialize a new Student instance.
 
+        :param first_name: The student's first name.
+        :param last_name: The student's last name.
+        :param age: The student's age.
+        """
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-def to_json(self):
-    """
-    Returns the dictionary description with simple data structures
-    (list, dictionary, string, integer, boolean)
-    for JSON serialization of an object.
+    def to_json(self):
+        """
+        Returns the dictionary description with simple data structures
+        (list, dictionary, string, integer, boolean)
+        for JSON serialization of the Student instance.
 
-    :param obj: The instance of a class to be serialized.
-    :return: A dictionary containing all serializable attributes of the object.
-    """
-    return self.__dict__
+        :return: A dictionary containing all serializable attributes of the Student object.
+        """
+        return self.__dict__
