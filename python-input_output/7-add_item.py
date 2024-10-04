@@ -30,4 +30,5 @@ def save_to_json_file(my_obj, filename):
 filename = "add_item.json"
 
 lista = load_from_json_file(filename)
-save_to_json_file(lista, filename)
+return save_to_json_file(lista, filename)
+
