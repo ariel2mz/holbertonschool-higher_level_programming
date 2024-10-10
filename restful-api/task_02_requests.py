@@ -31,10 +31,10 @@ def fetch_and_save_posts():
         posts_list.append(post_dict)
         with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
         # Crear un escritor de CSV usando DictWriter
-        writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
+            writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
         
         # Escribir la cabecera (los nombres de las columnas)
-        writer.writeheader()
+            writer.writeheader()
         
         # Escribir las filas (cada post)
-        writer.writerows(lista)
+            writer.writerows(lista)
