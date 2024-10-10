@@ -14,4 +14,4 @@ def fetch_and_print_posts():
     if codigo == 200:
         info = r.json()
         for key, value in json_data.items():
-        print(f"{key}")
+            print(f"{key}")
