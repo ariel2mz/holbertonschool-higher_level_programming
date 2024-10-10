@@ -3,6 +3,8 @@
 adssada
 """
 import requests
+import csv
+
 
 def fetch_and_print_posts():
     r = requests.get('https://jsonplaceholder.typicode.com/')
@@ -27,3 +29,12 @@ def fetch_and_save_posts():
             "body": post.get("body")
         }
         posts_list.append(post_dict)
+        with open(csv_file, mode='w', newline='', encoding='utf-8') as file:
+        # Crear un escritor de CSV usando DictWriter
+        writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
+        
+        # Escribir la cabecera (los nombres de las columnas)
+        writer.writeheader()
+        
+        # Escribir las filas (cada post)
+        writer.writerows(lista)
