@@ -31,7 +31,7 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("OK")
+            self.wfile.write(b"OK")
 
         else:
             self.send_response(404)
