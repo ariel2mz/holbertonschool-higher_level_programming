@@ -15,8 +15,7 @@ def home():
 # Route to return some data
 @app.route("/data")
 def data():
-    sample_data = {"name": "Flask API", "version": "1.0"}
-    return jsonify(sample_data)
+    return jsonify(users)
 
 # Route for status check
 @app.route("/status")
@@ -40,6 +39,8 @@ def add_user():
         return jsonify({"error": "Invalid data or missing username"}), 400
     
     username = user_data['username']
+    if username in users:
+        return jsonify({"error": "Username already exists"}), 400
     
     # Add the user data to the users dictionary
     users[username] = {
