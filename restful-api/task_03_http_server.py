@@ -29,10 +29,6 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b"Hello, this is a simple API!")
         elif self.path == "/status":
             self.send_response(200)
-            self.send_header("Content-type", "application/json")
-            self.end_headers()
-            status = {"status": "OK"}
-            self.wfile.write(json.dumps(status).encode('utf-8'))
 
         else:
             self.send_response(404)
