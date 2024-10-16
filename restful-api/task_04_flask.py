@@ -1,25 +1,29 @@
 #!/usr/bin/python3
-from flask import Flask
-from flask import jsonify
-from flask import request
-import json
-
+from flask import Flask, jsonify, request
 
 # Instantiate the Flask app
 app = Flask(__name__)
+
+# In-memory dictionary to store user data
 users = {}
 
 # Define a route for the root URL
 @app.route("/")
 def home():
     return "Welcome to the Flask API!"
+
+# Route to return some data
 @app.route("/data")
 def data():
-    return jsonify()
+    sample_data = {"name": "Flask API", "version": "1.0"}
+    return jsonify(sample_data)
+
+# Route for status check
 @app.route("/status")
 def status():
     return "OK"
-# Run the development server
+
+# Dynamic route to get a user by username
 @app.route("/users/<username>", methods=["GET"])
 def get_user(username):
     user = users.get(username)
@@ -27,7 +31,8 @@ def get_user(username):
         return jsonify(user), 200
     else:
         return jsonify({"error": "User not found"}), 404
-    
+
+# Route to add a new user via POST request
 @app.route("/add_user", methods=["POST"])
 def add_user():
     user_data = request.get_json()
@@ -45,5 +50,6 @@ def add_user():
     
     return jsonify({"message": "User added successfully", "user": users[username]}), 201
 
+# Run the Flask development server
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
