@@ -15,7 +15,8 @@ def home():
 # Route to return some data
 @app.route("/data")
 def data():
-        return jsonify(users), 200
+        userlist = list(users.keys())
+        return jsonify(userlist), 200
 # Route for status check
 @app.route("/status")
 def status():
