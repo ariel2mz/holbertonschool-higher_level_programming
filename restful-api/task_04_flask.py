@@ -42,6 +42,7 @@ def add_user():
     
     # Add the user data to the users dictionary
     users[username] = {
+        "username": user_data[username],
         "name": user_data.get("name"),
         "age": user_data.get("age"),
         "city": user_data.get("city")
