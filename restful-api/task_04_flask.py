@@ -35,20 +35,20 @@ def get_user(username):
 @app.route("/add_user", methods=["POST"])
 def add_user():
     user_data = request.get_json()
-    if not user_data or 'username' not in user_data:
+    if 'username' not in user_data:
         return jsonify({"error": "Invalid data or missing username"}), 400
     
-    username = user_data['username']
     
     # Add the user data to the users dictionary
-    users[username] = {
-        "username": user_data[username],
+    nuevo = {
+        "username": user_data['username'],
         "name": user_data.get("name"),
         "age": user_data.get("age"),
         "city": user_data.get("city")
     }
     
-    return jsonify({"message": "User added successfully", "user": users[username]}), 201
+    users[nuevo['username']] = nuevo
+    return jsonify({"message": "User added successfully"}), 201
 
 # Run the Flask development server
 if __name__ == "__main__":
