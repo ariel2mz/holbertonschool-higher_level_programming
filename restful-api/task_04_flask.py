@@ -15,10 +15,7 @@ def home():
 # Route to return some data
 @app.route("/data")
 def data():
-    if users:
         return jsonify(users), 200
-    else:
-        return jsonify({"message": "No users found"}), 200
 # Route for status check
 @app.route("/status")
 def status():
@@ -29,7 +26,7 @@ def status():
 def get_user(username):
     user = users.get(username)
     if user:
-        return jsonify(user), 200
+        return jsonify(user)
     else:
         return jsonify({"error": "User not found"}), 404
 
@@ -41,8 +38,6 @@ def add_user():
         return jsonify({"error": "Invalid data or missing username"}), 400
     
     username = user_data['username']
-    if username in users:
-        return jsonify({"error": "Username already exists"}), 400
     
     # Add the user data to the users dictionary
     users[username] = {
