@@ -48,7 +48,7 @@ def add_user():
     }
     
     users[nuevo['username']] = nuevo
-    return jsonify({"message": "User added successfully"}), 201
+    return jsonify({"message": "User added", "user": nuevo}), 201
 
 # Run the Flask development server
 if __name__ == "__main__":
