@@ -1,0 +1,2 @@
+-- AAAAAAAAAAaaa
+SHOW TABLES;
