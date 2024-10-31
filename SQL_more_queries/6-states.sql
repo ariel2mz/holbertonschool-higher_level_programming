@@ -1,3 +1,4 @@
 -- sadadsadsada
 CREATE DATABASE IF NOT EXISTS hbtn_0c_usa;
+USE hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS `states` (`id` INT NOT NULL DEFAULT AUTO_INCREMENT, `name` VARCHAR(256), UNIQUE (`id`), PRIMARY KEY (`id`));
