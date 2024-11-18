@@ -18,5 +18,13 @@ class CustomObject:
     
     @classmethod
     def deserialize(cls, filename):
-         with open(filename, "rb") as file:
-            return pickle.load(file)
+        try:
+            with open(filename, "rb") as file:
+                return pickle.load(file)
+        except FileNotFoundError:
+            print(f"Error: File '{filename}' not found.")
+        except EOFError:
+            print(f"Error: File '{filename}' is empty or corrupted.")
+        except pickle.UnpicklingError:
+            print(f"Error: File '{filename}' contains invalid serialized data.")
+        return None
