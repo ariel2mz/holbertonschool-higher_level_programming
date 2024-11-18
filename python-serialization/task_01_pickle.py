@@ -6,7 +6,7 @@ class CustomObject:
     def __init__(self, name, age, is_student):
         self.name = name
         self.age = age
-        self.student = is_student
+        self.is_student = is_student
 
     # Example method
     def display(self):
