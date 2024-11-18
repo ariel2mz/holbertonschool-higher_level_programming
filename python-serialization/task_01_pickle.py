@@ -1,3 +1,6 @@
+import json
+import pickle
+
 class CustomObject:
     # Constructor method (optional)
     def __init__(self, name, age, is_student):
@@ -6,5 +9,13 @@ class CustomObject:
         self.student = is_student
 
     # Example method
-    def method_name(self):
+    def display(self):
         print(f"Name: {self.name}\nAge: {self.age}\nIs Student: {True}")
+    
+    def serialize(self, filename):
+        with open(filename, "wb") as file:
+            pickle.dump(self, file)
+    
+    @classmethod
+    def deserialize(cls, filename):
+         return CustomObject.deserialize(filename)
