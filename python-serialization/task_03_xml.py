@@ -11,3 +11,6 @@ def serialize_to_xml(dictionary, filename):
     tree = ET.ElementTree(root)
     with open(filename, "wb") as file:
         tree.write(file, encoding="utf-8", xml_declaration=True)
+
+def deserialize_from_xml(filename):
+    pass
