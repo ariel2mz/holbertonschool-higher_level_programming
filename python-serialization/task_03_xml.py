@@ -14,4 +14,9 @@ def serialize_to_xml(dictionary, filename):
         tree.write(file, encoding="utf-8", xml_declaration=True)
 
 def deserialize_from_xml(filename):
-    pass
+    dict = {}
+    tree = ET.parse(filename)
+    root = tree.getroot()
+    for child in root:
+        dict[child.get("key")] = child.text
+    return dict
