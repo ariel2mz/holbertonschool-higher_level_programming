@@ -4,7 +4,7 @@ def serialize_to_xml(dictionary, filename):
     root = ET.Element("root")
     root.tag = 'data'
 
-    for key, value in dictionary:
+    for key, value in dictionary.items():
         child = ET.SubElement(root, "child")
         child.set(key, value)
     
