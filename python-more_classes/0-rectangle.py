@@ -9,7 +9,7 @@ basic strucrelated to square functionality.
 
 class Rectangle:
     """
-    Easdas Asddsa asdsasad 
+    Easdas Asddsa asdsasad
 
     DASDsa
     """
