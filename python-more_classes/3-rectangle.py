@@ -79,12 +79,12 @@ class Rectangle:
             return 0
     def __str__(self):
         for i in range(0, self.__height):
-            for i in range(0, self.__width):
+            for x in range(0, self.__width):
                 print("#")
             print("\n")
     
     def __repr__(self):
         for i in range(0, self.__height):
-            for i in range(0, self.__width):
+            for x in range(0, self.__width):
                 print("#")
             print("\n")
