@@ -45,7 +45,7 @@ class Rectangle:
         asadsadsa
         sadsadsa
         """
-        return self.__width
+        return self.__height
     @height.setter
     def height(self, value):
         """
@@ -63,7 +63,7 @@ class Rectangle:
         
         asdsadas
         """
-        return self.__height * self._width
+        return self.__height * self.__width
     
     def perimeter(self):
         """
@@ -71,7 +71,7 @@ class Rectangle:
 
         asdsasdsa
         """
-        if self.__height <= 0 or self.__width <= 0:
+        if self.__height > 0 or self.__width > 0:
             return (self.__height + self.__width) * 2
         else:
             return 0
