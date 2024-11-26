@@ -27,8 +27,9 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
+
     @classmethod
-    def print_symbol(cls, symbol):
+    def set_print_symbol(cls, symbol):
         """
         Change the symbol used for printing the rectangle.
 
