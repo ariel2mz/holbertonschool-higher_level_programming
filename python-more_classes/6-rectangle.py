@@ -13,6 +13,7 @@ class Rectangle:
     A class to represent a rectangle with width and height.
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Initialize the Rectangle object.
@@ -24,6 +25,7 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
     @property
     def width(self):
         """Get the width of the rectangle."""
