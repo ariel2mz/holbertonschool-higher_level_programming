@@ -78,7 +78,7 @@ class Rectangle:
         Returns:
             str: A string that can recreate the rectangle using `eval`.
         """
-        return f"Rectangle({self.__width}, {self.__height})"   
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """
