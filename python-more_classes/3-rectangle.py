@@ -72,9 +72,6 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Return a string that can be used to recreate the rectangle.
-
-        Example:
-            Rectangle(4, 6)
+        Return a representation similar to the default Python object representation.
         """
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"<{self.__class__.__module__}.{self.__class__.__name__} object>"
