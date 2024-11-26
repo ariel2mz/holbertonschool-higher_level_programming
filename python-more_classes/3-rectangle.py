@@ -7,6 +7,7 @@ and provides methods for calculating the area, perimeter, and string
 representation of the rectangle.
 """
 
+
 class Rectangle:
     """
     A class to represent a rectangle with width and height.
